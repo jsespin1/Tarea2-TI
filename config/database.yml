@@ -26,4 +26,4 @@ production:
   <<: *default
   database: Tarea2-TI_production
   username: Tarea2-TI
-  password: <%= ENV['Tarea2-TI_DATABASE_PASSWORD'] %>
+  password: <%= ENV['TAREA2-TI_DATABASE_PASSWORD'] %>
