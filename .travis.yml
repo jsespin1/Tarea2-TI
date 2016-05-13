@@ -5,3 +5,8 @@ rvm:
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
+
+  deploy:
+  provider: heroku
+  app:
+    master: https://peaceful-scrubland-44962.herokuapp.com
