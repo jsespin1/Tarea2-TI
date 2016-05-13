@@ -9,4 +9,4 @@ before_script:
 deploy:
   provider: heroku
   app:
-    master: peaceful-scrubland-44962
+    master: Tarea2-TI
