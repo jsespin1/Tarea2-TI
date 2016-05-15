@@ -3,6 +3,14 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  match '/instagram/tag/buscar/:tag' => 'api#getTags', via: :post, defaults: {format: 'json'}
+
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1 do
+        get '/instagram/tag/buscar/:tag' => 'api#getTags'
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
