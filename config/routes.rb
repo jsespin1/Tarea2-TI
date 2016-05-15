@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   match '/instagram/tag/buscar/:tag' => 'api#getTags', via: :post, defaults: {format: 'json'}
 
+
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1 do
         get '/instagram/tag/buscar/:tag' => 'api#getTags'
